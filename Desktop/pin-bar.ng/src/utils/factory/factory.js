@@ -1,16 +1,18 @@
 class Factory {
-   constructor(model, options) {
-      this.model = model;
-      this.options = options;
-   }
-   static async create() {
-      await this.model.create(options).bind(this.model);
-   }
-   static async find() {
-      //    await this.model.fin
-   }
+    constructor(model) {
+        this.model = model;
+    }
+    async create(options) {
+        return await this.model.create(options);
+    }
+    async findOne(criteria, projection) {
+        return await this.model.findOne(criteria, projection);
+    }
+    async find(criteria, projection) {
+        return await this.model.fine(criteria, projection);
+    }
 }
 
 module.exports = {
-   Factory,
+    Factory,
 };

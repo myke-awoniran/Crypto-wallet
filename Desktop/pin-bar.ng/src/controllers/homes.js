@@ -2,7 +2,7 @@ const { response } = require('../utils/helper');
 const AppError = require('../errors/operational');
 
 exports.HttpHome = (req, res) => {
-   response(res, 200, 'welcome pinbar to api');
+   response(res, 200, 'welcome to pinbar.ng  api');
 };
 
 exports.undefinedRoutes = (req, res, next) => {

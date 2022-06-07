@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const errorHandler = require('./src/errors/Global');
-const router = require('./src/routes/home');
+const HomeRouter = require('./src/routes/home');
+const AuthRouter = require('./src/routes/auth');
+const { undefinedRoutes } = require('./src/controllers/homes');
 
 //SECURITY MIDDLEWARE
 app.use(cors());
@@ -10,7 +12,12 @@ app.use(cors());
 app.use(express.json());
 
 //ROUTES HANDLER
-app.use(router);
+app.use(HomeRouter);
+
+app.use(AuthRouter);
+
+app.use('*', undefinedRoutes);
 
 app.use(errorHandler);
+
 module.exports = app;
