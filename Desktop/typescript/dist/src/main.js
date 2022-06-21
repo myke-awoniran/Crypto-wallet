@@ -22,6 +22,7 @@ function showAge(age) {
 }
 showAge(14);
 (0, module_1.setAge)(13);
+(0, module_1.Jesus)('micheal');
 // type inference
 let mydata = [4, 'numberd'];
 // const myAge=showAge(age)

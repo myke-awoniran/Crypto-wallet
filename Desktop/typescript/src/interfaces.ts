@@ -1,0 +1,3 @@
+interface like{
+    likeBy:string[],
+}

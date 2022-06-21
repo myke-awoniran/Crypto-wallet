@@ -1,4 +1,4 @@
-import {setAge}from './module'
+import {setAge,Jesus}from './module'
 let myName:string
 // let myAge:number
 
@@ -27,6 +27,7 @@ function showAge(age:number):void{
 
 showAge(14)
 setAge(13)
+Jesus('micheal')
 
 interface Robust{
     name:string,
