@@ -17,5 +17,3 @@ async function startServer() {
 }
 
 startServer();
-
-// ignore node modules
