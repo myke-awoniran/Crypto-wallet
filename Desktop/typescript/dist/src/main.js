@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const module_1 = require("./module");
+const classes_1 = require("./classes");
 let myName;
 // let myAge:number
 const welcome = function (myName) {
@@ -19,6 +20,8 @@ const { age, } = profile;
 console.log(welcome(myName), 'of', age);
 function showAge(age) {
     console.log(`this user age is ${age}`);
+    let name = (new classes_1.AppError('something went very wrong', 400));
+    console.log(name.message);
 }
 showAge(14);
 (0, module_1.setAge)(13);

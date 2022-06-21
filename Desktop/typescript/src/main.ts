@@ -1,4 +1,6 @@
 import {setAge,Jesus}from './module'
+import{like}from './interfaces'
+import {AppError} from './classes'
 let myName:string
 // let myAge:number
 
@@ -22,12 +24,15 @@ const profile={
 const {age,}:{age:number}=profile
 console.log(welcome(myName) ,'of', age)
 function showAge(age:number):void{
-    console.log(`this user age is ${age}`)
+console.log(`this user age is ${age}`)
+let name=(new AppError('something went very wrong',400))
+console.log(name.message)
 }
 
 showAge(14)
 setAge(13)
 Jesus('micheal')
+
 
 interface Robust{
     name:string,
